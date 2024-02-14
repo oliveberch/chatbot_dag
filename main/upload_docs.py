@@ -26,7 +26,7 @@ for i in range(len(l)):
     })
 
 
-from pinecone import Pinecone
+
 
 
 

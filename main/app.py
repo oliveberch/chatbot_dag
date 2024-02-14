@@ -1,12 +1,22 @@
 import streamlit as st
 import agents.sales_agent as sales_agent
+import random
+
+st.set_page_config(
+    page_title="BrightSpeed",
+    page_icon="🚀",
+    layout="wide",
+    initial_sidebar_state="auto",
+)
 
 st.title('BrightSpeed')
-st.subheader('Service Agent')
+
+names = ["Ajay", "John", "Jane", "Mary"]  
+agent = random.choice(names)
 
 if 'chat' not in st.session_state:
   st.session_state['chat'] = [{
-    "content": "Hi, you've reached service agent for Brightspeed. How can I help you today?",
+    "content": f"Hi, you've reached {agent}. How can I help you today?",
     "role": "ai"
   }]
 
