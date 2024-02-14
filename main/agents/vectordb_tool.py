@@ -6,7 +6,7 @@ from langchain.chains import LLMChain
 from langchain.prompts import PromptTemplate
 
 
-vectordb = Pinecone(index=pinecone_index.get_index('trng-index'),embedding=get_embedding_model().embed_query, text_key="text")
+vectordb = Pinecone(index=pinecone_index.get_index('index1'),embedding=get_embedding_model().embed_query, text_key="text")
 
 prompt = PromptTemplate.from_template(template="use this tool only for questions related to brightspeed sales")
 

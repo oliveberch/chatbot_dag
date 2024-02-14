@@ -1,0 +1,10 @@
+streamlit
+langchain
+pinecone-client
+python-dotenv
+sentence-transformers
+langchain_experimental
+openai
+pypdf
+duckduckgo-search 
+langchain_openai
