@@ -1,23 +1,42 @@
-# This script is used to create vector embeds and upload them to pinecone db.
-from dotenv import load_dotenv
-from langchain.document_loaders import PyPDFLoader, TextLoader
-from langchain.text_splitter import CharacterTextSplitter
-from langchain.embeddings.huggingface import HuggingFaceEmbeddings
-from langchain.vectorstores import Pinecone
+from pinecone import Pinecone
+from sentence_transformers import SentenceTransformer
+PINECONE_API_KEY='67c15152-6c07-44d1-b3ba-d2886d18b1d5'
+client = Pinecone(api_key=PINECONE_API_KEY)
 
-load_dotenv()
 
-loader = TextLoader("D:/Project2/GenAI_chatbot/assets/service.txt")
-pages = loader.load_and_split()
 
-embeddings_model = HuggingFaceEmbeddings(
-    model_name="thenlper/gte-large",
-    encode_kwargs={"normalize_embeddings": True},
-)
-text_splitter = CharacterTextSplitter(chunk_size=100, chunk_overlap=10)
-documents = text_splitter.split_documents(pages)
+fp=open('C:/Users/krant/OneDrive/Documents/revature p2 project/GenAI_chatbot/assets/service.txt','r')
+l=fp.readlines()
 
-index= "index1"
-    
-Pinecone.from_documents(documents, embeddings_model, index_name=index)
+embeddings_model = SentenceTransformer('thenlper/gte-large')
 
+embeddings=[embeddings_model.encode(i) for i in l]
+
+
+
+
+
+vectors=[]
+
+for i in range(len(l)):
+    vectors.append({
+        'id':str(i),
+        'values':embeddings[i],
+        'metadata':{'text':l[i]}
+    })
+
+
+from pinecone import Pinecone
+
+
+
+index=client.Index('index1')
+
+try:
+    index.upsert(
+    vectors=vectors,
+    namespace='service-namespace')
+    print('success')
+except Exception as e:
+
+    print(e)
