@@ -7,7 +7,7 @@ from langchain.vectorstores import Pinecone
 
 load_dotenv()
 
-loader = TextLoader("C:/TrainingMaterial/generative-ai/genai-material/trng-1855/trng-git-repo/trng-1855/week-6/src/assets/brightspeed-sales.txt")
+loader = TextLoader("D:/Project2/GenAI_chatbot/assets/service.txt")
 pages = loader.load_and_split()
 
 embeddings_model = HuggingFaceEmbeddings(
@@ -17,7 +17,7 @@ embeddings_model = HuggingFaceEmbeddings(
 text_splitter = CharacterTextSplitter(chunk_size=100, chunk_overlap=10)
 documents = text_splitter.split_documents(pages)
 
-index= "trng-index"
+index= "index1"
     
 Pinecone.from_documents(documents, embeddings_model, index_name=index)
 

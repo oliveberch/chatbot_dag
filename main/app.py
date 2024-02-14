@@ -1,6 +1,5 @@
 import streamlit as st
 import agents.sales_agent as sales_agent
-# from agents.sales_agent import get_agent
 
 st.title('BrightSpeed')
 st.subheader('Service Agent')
@@ -17,6 +16,9 @@ if user_input:
     "content": user_input,
     "role": "user"
   })
+
+  # call classifier to get agent
+  
   agent = sales_agent.get_agent()
   agent_response = agent.invoke({user_input})
   st.session_state['chat'].append({
