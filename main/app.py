@@ -1,5 +1,8 @@
 import streamlit as st
 import agents.sales_agent as sales_agent
+import agents.service_agent as service_agent
+import agents.general_agent as general_agent
+
 import random
 
 st.set_page_config(
@@ -29,7 +32,7 @@ if user_input:
 
   # call classifier to get agent
   
-  agent = sales_agent.get_agent()
+  agent = service_agent.get_agent()
   agent_response = agent.invoke({user_input})
   st.session_state['chat'].append({
     "content": agent_response['output'],

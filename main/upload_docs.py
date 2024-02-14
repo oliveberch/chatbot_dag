@@ -1,42 +1,36 @@
 from pinecone import Pinecone
 from sentence_transformers import SentenceTransformer
-PINECONE_API_KEY='67c15152-6c07-44d1-b3ba-d2886d18b1d5'
-client = Pinecone(api_key=PINECONE_API_KEY)
+from dotenv import load_dotenv
+import os
 
+# Load API key from environment variables
+load_dotenv()
+api_key = os.getenv('PINECONE_API_KEY')
 
+# Initialize Pinecone client
+client = Pinecone(api_key=api_key)
 
-fp=open('C:/Users/krant/OneDrive/Documents/revature p2 project/GenAI_chatbot/assets/service.txt','r')
-l=fp.readlines()
+# Read text data from file
+with open('C:/Users/krant/OneDrive/Documents/revature p2 project/GenAI_chatbot/assets/service.txt', 'r') as fp:
+    lines = fp.readlines()
 
+# Initialize Sentence Transformer model
 embeddings_model = SentenceTransformer('thenlper/gte-large')
 
-embeddings=[embeddings_model.encode(i) for i in l]
+# Generate embeddings for each line of text
+embeddings = [embeddings_model.encode(line) for line in lines]
 
+# Prepare vectors for Pinecone index
+vectors = [{'id': str(i), 'values': embeddings[i], 'metadata': {'text': lines[i]}} for i in range(len(lines))]
 
-
-
-
-vectors=[]
-
-for i in range(len(l)):
-    vectors.append({
-        'id':str(i),
-        'values':embeddings[i],
-        'metadata':{'text':l[i]}
-    })
-
-
-
-
-
-
-index=client.Index('index1')
+# Create or update Pinecone index
+index = client.Index('index1')
 
 try:
     index.upsert(
-    vectors=vectors,
-    namespace='service-namespace')
-    print('success')
+        vectors=vectors,
+        namespace='service-namespace'
+    )
+    print('Success')
 except Exception as e:
-
     print(e)
