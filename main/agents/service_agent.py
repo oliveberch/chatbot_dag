@@ -31,7 +31,8 @@ def get_agent():
         handle_parsing_erros= True,
         verbose = True,
         max_iterations=3,
-        memory = memory
+        memory = memory,
+        handle_parsing_errors=True
     )
     return agent_execution
 
