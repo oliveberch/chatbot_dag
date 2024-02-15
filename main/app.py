@@ -20,8 +20,8 @@ st.title('Chatbot')
 names = ["Ajay", "John", "Jane", "Mary"]  
 agent = random.choice(names)
 
-if 'chat' not in st.session_state:
-  st.session_state['chat'] = [{
+if 'chat-history' not in st.session_state:
+  st.session_state['chat-history'] = [{
     "content": f"Hi, you've reached Brightspeed chat support. How can I help you today?",
     "role": "ai"
   }]
@@ -29,7 +29,7 @@ if 'chat' not in st.session_state:
 user_input = st.chat_input('Message', key= "user_input")
 
 if user_input:
-  st.session_state['chat'].append({
+  st.session_state['chat-history'].append({
     "content": user_input,
     "role": "user"
   })
@@ -42,7 +42,7 @@ if user_input:
     # service
     agent = service_agent.get_agent()
     agent_response = agent.invoke({user_input})
-    st.session_state['chat'].append({
+    st.session_state['chat-history'].append({
       "content": agent_response['output'],
       "role": "ai"
     })
@@ -50,7 +50,7 @@ if user_input:
     # sales
     agent = sales_agent.get_agent()
     agent_response = agent.invoke({user_input})
-    st.session_state['chat'].append({
+    st.session_state['chat-history'].append({
       "content": agent_response['output'],
       "role": "ai"
     })
@@ -58,23 +58,14 @@ if user_input:
     # general
     agent = general_agent.get_agent()
     agent_response = agent.invoke({user_input})
-    st.session_state['chat'].append({
+    st.session_state['chat-history'].append({
       "content": agent_response['output'],
       "role": "ai"
     })
 
   
 
-if st.session_state['chat']:
-  for i in range(0, len(st.session_state['chat'])):
-    user_message = st.session_state['chat'][i]
+if st.session_state['chat-history']:
+  for i in range(0, len(st.session_state['chat-history'])):
+    user_message = st.session_state['chat-history'][i]
     st.chat_message(user_message["role"]).write(user_message["content"])
-
-
-# stream lit theme:
-# [theme]
-# primaryColor="#ff5d22"
-# backgroundColor="#ffca33"
-# secondaryBackgroundColor="#ffffff"
-# textColor="#000000"
-# font="monospace"
