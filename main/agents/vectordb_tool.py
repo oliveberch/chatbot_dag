@@ -14,8 +14,8 @@ def get_vectordb_tool():
 
     tool = Tool(
         func = vectordb.similarity_search,
-        name="BrightSpeed Sales Documents Vector DB Tools",
-        description="Contains sales info related to Braoadband plans use this tool only when the questions are related to brightspeed sales",
+        name="BrightSpeed Documents",
+        description="contains info related to brightspeed. Use this tool only when the questions are related to Brightspeed",
         retriever_top_k=3
     )
 

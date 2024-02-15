@@ -22,11 +22,11 @@ agent = random.choice(names)
 
 if 'chat' not in st.session_state:
   st.session_state['chat'] = [{
-    "content": f"Hi, you've reached {agent}. How can I help you today?",
+    "content": f"Hi, you've reached Brightspeed chat support. How can I help you today?",
     "role": "ai"
   }]
 
-user_input = st.chat_input('message:', key= "user_input")
+user_input = st.chat_input('Message', key= "user_input")
 
 if user_input:
   st.session_state['chat'].append({
@@ -72,7 +72,6 @@ if st.session_state['chat']:
 
 
 # stream lit theme:
-
 # [theme]
 # primaryColor="#ff5d22"
 # backgroundColor="#ffca33"
