@@ -13,7 +13,7 @@ def get_chat_model(model:str):
         )
         model = Llama2Chat(llm=llm)
     if(model=="openai"):
-        model = ChatOpenAI()
+        model = ChatOpenAI(temperature=0.6)
     
     return model
 
@@ -24,7 +24,7 @@ def get_llm(llm:str):
         model_id="meta-llama/Llama-2-70b-chat-hf"
         )
     if(llm=="openai"):
-        llm = ChatOpenAI()
+        llm = ChatOpenAI(temperature=0.6)
     
     return llm
 
