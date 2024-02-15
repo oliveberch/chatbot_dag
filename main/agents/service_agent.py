@@ -9,12 +9,12 @@ from model import get_llm
 
 
 def get_tools():
-    tools = load_tools([], llm = get_llm('llama2'))
+    tools = load_tools([], llm = get_llm('openai'))
     tools.append(get_vectordb_tool())
     return tools
 
 def get_agent():
-    model = get_chat_model('llama2')
+    model = get_chat_model('openai')
     memory = get_memory()
     system_message = service_agent_prompt
 

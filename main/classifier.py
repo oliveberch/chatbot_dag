@@ -28,7 +28,7 @@ def predict_text_classification_single_label_sample(
 def classifier(user_input):
     project = "theta-cell-406519"
     location = "us-central1"
-    endpoint = "8395934561371947008"
+    endpoint = "398667523068788736"
     content = user_input
     service_account_key_path = "main/theta-cell-406519-112ac0726a30.json"
 

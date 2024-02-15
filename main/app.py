@@ -10,7 +10,7 @@ import random
 logo_path = "assets/logo.jpg"
 
 st.set_page_config(
-    page_title="BrightSpeed",
+    page_title="brightspeed",
     page_icon = logo_path,
     initial_sidebar_state="auto",
 )
