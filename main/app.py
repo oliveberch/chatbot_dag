@@ -1,8 +1,6 @@
 import streamlit as st
-import agents.sales_agent as sales_agent
-import agents.service_agent as service_agent
-import agents.general_agent as general_agent
-from classifier import classifier, test_classifier
+from  agents import sales_agent, service_agent, general_agent
+from classifier import classifier
 
 import random
 
@@ -37,7 +35,7 @@ if user_input:
   })
 
   # call classifier to get agent
-  category = test_classifier(user_input)
+  category = classifier(user_input)
 
   # make calls based on agent
   if category == 'service':
