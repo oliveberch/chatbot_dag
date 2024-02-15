@@ -1,4 +1,5 @@
 from pinecone import Pinecone
+from pinecone_index import get_index
 from sentence_transformers import SentenceTransformer
 from dotenv import load_dotenv
 import os
@@ -24,7 +25,7 @@ embeddings = [embeddings_model.encode(line) for line in lines]
 vectors = [{'id': str(i), 'values': embeddings[i], 'metadata': {'text': lines[i]}} for i in range(len(lines))]
 
 # Create or update Pinecone index
-index = client.Index('index1')
+index = get_index('index1')
 
 try:
     index.upsert(

@@ -9,3 +9,6 @@ pypdf
 duckduckgo-search 
 langchain_openai
 PyPDF2
+google-cloud-aiplatform 
+google-cloud-storage
+oauth2client
