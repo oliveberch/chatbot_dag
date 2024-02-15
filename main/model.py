@@ -5,9 +5,8 @@ from langchain_openai.llms import OpenAI
 from dotenv import load_dotenv
 import os
 
-load_dotenv()
-
 def get_chat_model(model:str):
+    load_dotenv()
     if(model == "llama2"):
         llm = DeepInfra(
         model_id="meta-llama/Llama-2-70b-chat-hf"
@@ -19,6 +18,7 @@ def get_chat_model(model:str):
     return model
 
 def get_llm(llm:str):
+    load_dotenv()
     if(llm == "llama2"):
         llm = DeepInfra(
         model_id="meta-llama/Llama-2-70b-chat-hf"
