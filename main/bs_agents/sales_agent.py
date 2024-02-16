@@ -1,8 +1,8 @@
 from langchain.agents import ConversationalChatAgent, AgentExecutor
-from agents.vectordb_tool import get_vectordb_tool
+from bs_agents.vectordb_tool import get_vectordb_tool
 from model import get_chat_model
-from agents.agent_chat_memory import get_memory
-from agents.service_agent_prompt import service_agent_prompt
+from bs_agents.agent_chat_memory import get_memory
+from bs_agents.sales_agent_prompt import sales_agent_prompt
 from langchain.agents import load_tools
 from model import get_llm
 
@@ -15,7 +15,7 @@ def get_tools():
 
 def get_agent():
     model = get_chat_model('llama2')
-    system_message = service_agent_prompt
+    system_message = sales_agent_prompt
 
     agent_definition = ConversationalChatAgent.from_llm_and_tools(
         llm = model,

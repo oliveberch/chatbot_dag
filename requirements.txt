@@ -13,3 +13,7 @@ google-cloud-aiplatform
 google-cloud-storage
 oauth2client
 langchain-pinecone
+apache-airflow 
+apache-airflow-providers-amazon 
+apache-airflow-providers-google
+apache-airflow[gcp] pinecone-client
