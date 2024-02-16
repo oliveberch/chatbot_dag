@@ -1,5 +1,6 @@
 from langchain.agents import ConversationalChatAgent, AgentExecutor
 from bs_agents.vectordb_tool import get_vectordb_tool
+from bs_agents.greetuser_tool import get_greet_user_tool
 from model import get_chat_model
 from bs_agents.agent_chat_memory import get_memory
 from bs_agents.general_agent_prompt import general_agent_prompt
@@ -10,6 +11,7 @@ from model import get_llm
 def get_tools():
     tools = load_tools([], llm = get_llm('llama2'))
     tools.append(get_vectordb_tool()) 
+    tools.append(get_greet_user_tool())
     return tools
 
 def get_agent():
