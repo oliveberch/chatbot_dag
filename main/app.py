@@ -2,11 +2,8 @@ import streamlit as st
 from  agents import sales_agent, service_agent, general_agent
 from classifier import classifier
 
-import random
 
-
-logo_path = "assets/logo.jpg"
-
+logo_path = "main\static\logo.jpg"
 
 st.set_page_config(
     page_title="brightspeed",
@@ -16,13 +13,9 @@ st.set_page_config(
 
 st.title('Chatbot')
 
-
-names = ["Ajay", "John", "Jane", "Mary"]  
-agent = random.choice(names)
-
 if 'chat-history' not in st.session_state:
   st.session_state['chat-history'] = [{
-    "content": f"Hi, you've reached Brightspeed chat support. How can I help you today?",
+    "content": "Hi, you've reached Brightspeed chat support. How can I help you today?",
     "role": "ai"
   }]
 
@@ -64,7 +57,6 @@ if user_input:
     })
 
   
-
 if st.session_state['chat-history']:
   for i in range(0, len(st.session_state['chat-history'])):
     user_message = st.session_state['chat-history'][i]
