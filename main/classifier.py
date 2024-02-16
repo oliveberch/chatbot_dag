@@ -4,10 +4,14 @@ from google.oauth2 import service_account
 # prediction using model endpoint
 import os
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS']='theta-cell-406519-112ac0726a30.json'
-credentials=service_account.Credentials.from_service_account_file('theta-cell-406519-112ac0726a30.json')
+# os.environ['GOOGLE_APPLICATION_CREDENTIALS']='gopika.json'
+os.environ['GOOGLE_APPLICATION_CREDENTIALS']='azaan.json'
+
+# credentials=service_account.Credentials.from_service_account_file('gopika.json')
+# credentials=service_account.Credentials.from_service_account_file('azaan.json')
+
 def predict_text_classification_single_label_sample(
-    project, location, endpoint, content, service_account_key_path
+    project, location, endpoint, content
 ):
     try:
         aiplatform.init(
@@ -35,11 +39,19 @@ def predict_text_classification_single_label_sample(
         print(f"An error occurred: {e}")
 
 
-def classifier(user_input):
+def classifier_gopika(user_input):
     project = "theta-cell-406519"
     location = "us-central1"
     endpoint = "398667523068788736"
     content = user_input
-    service_account_key_path = "./theta-cell-406519-112ac0726a30.json"
+    # service_account_key_path = "./gopika.json"
 
-    predict_text_classification_single_label_sample(project, location, endpoint, content, service_account_key_path)
+    predict_text_classification_single_label_sample(project, location, endpoint, content)
+
+def classifier_azaan(user_input):
+    project = "spherical-list-412116"
+    location = "us-central1"
+    endpoint = "4741826413714210816"
+    content = user_input
+
+    predict_text_classification_single_label_sample(project, location, endpoint, content)

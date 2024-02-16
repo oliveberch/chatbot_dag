@@ -9,7 +9,7 @@ from model import get_llm
 
 def get_tools():
     tools = load_tools([], llm = get_llm('llama2'))
-    tools.append(get_vectordb_tool())
+    tools.append(get_vectordb_tool()) 
     return tools
 
 def get_agent():

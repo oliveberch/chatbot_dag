@@ -1,5 +1,4 @@
 from pinecone import Pinecone
-import pinecone
 import os
 from dotenv import load_dotenv
 load_dotenv()

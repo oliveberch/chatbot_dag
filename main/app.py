@@ -1,6 +1,6 @@
 import streamlit as st
 from  agents import sales_agent, service_agent, general_agent
-from classifier import classifier
+from classifier import classifier_gopika, classifier_azaan
 
 
 logo_path = "main\static\logo.jpg"
@@ -28,7 +28,9 @@ if user_input:
   })
 
   # call classifier to get agent
-  category = classifier(user_input)
+  # category = classifier_gopika(user_input)
+  category = classifier_azaan(user_input)
+  
 
   # make calls based on agent
   if category == 'service':
