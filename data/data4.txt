@@ -1,0 +1,298 @@
+{
+issue:availability of service
+resolution:. Service may not be available in all areas or at the rates or speeds generally marketed. The
+speed(s) available at your location are identified during the ordering process. Service speeds disclosed to you
+are “up to” a specific download speed via a wired connection under typical circumstances within the
+Brightspeed network and at your location. Brightspeed will provision your line at the maximum speed it
+qualifies for within the speed range of the Service you selected. Your location may subsequently be eligible
+for additional speed options, provided that you will be charged a speed change charge for any speed
+change
+}
+
+{
+issue:terms regarding High-Speed Internet Purchased Through Brightspeed ON Portal.
+resolution:(A) Brightspeed ON Portal Customers will have no Equipment to install or self-install. Your location is prewired and configured for Service and you simply install service by subscribing through the
+Brightspeed ON Portal.
+(B) Brightspeed ON Portal Customers will have to set up automatic, monthly recurring payments for their
+Services on a credit card. Monthly recurring charges will be billed to your credit card on file in
+advance. If you purchase any additional value-added services, those purchases will be billed to your
+credit card on file with us within a day or two of your order.
+(C) Services are available without any early termination liability because there are no term commitments
+connected with Services purchased through the Brightspeed ON Portal.
+(D) Monthly recurring charges may be increased by up to $2 per month every 6 months.
+(E) You may cancel your Services at any time by following the cancellation instructions in the
+Brightspeed ON Portal. However, if you cancel your Services on any day other than the last day of
+your applicable billing cycle, your payment for that month of Services will not be prorated or
+refunded and your Services will terminate on that date
+}
+
+{
+issue: terms Account Usage and Identification
+resolution : You will receive a user name and password and/or other identifying
+information (collectively and together with other information about your account the “Account
+Information”) upon completing the registration process. You are responsible for maintaining the
+confidentiality of the Account Information, and are fully responsible for all activities that occur under your
+account including payment for all such activities. You agree: (A) that only you and your authorized
+designees will use your Account Information and that you will not transfer or disclose such Account
+Information to any other person, (B) to immediately notify Brightspeed of any unauthorized use on your
+account or any other breach of security, and (C) to ensure that you exit from your account at the end of
+each session.
+}
+
+{
+issue: i want to know about Advanced Service 
+resolution : • 24/7 technical support for connectivity and security settings for covered equipment;
+• Same day or next day on-site support for networking maintenance for covered equipment;
+• Enabling of wireless encryption for wireless networks;
+• Assistance connecting your peripheral devices 1 network device, 1 printer and up to 5
+computers (with a maximum of 7 peripheral devices, including both computers and game
+consoles) to the network;
+• Configuration of high-speed Internet application software that is supported as part of your
+Brightspeed @Ease Plan.
+}
+
+{
+issue: terms regarding Purchased Equipment.
+resolution : You will be deemed the owner of the purchased Equipment, and bear all risk of loss
+of, theft of, casualty to or damage to the Equipment, from the time it is received by you until the time (if any)
+when it is returned by you pursuant to this Agreement and has been received by Brightspeed. If the
+Equipment is inoperable, please contact Brightspeed by obtaining the applicable technical support contact
+information at the following websites: Residential Customer Service (Consumer/Residential accounts), Small
+Business Customer Service (Small Business accounts), or Enterprise and Strategic Customer Service
+(Large/Enterprise/Global Business & Government accounts). 
+}
+
+{
+issue : Terms related to Delivery and Installation of Equipment.
+resolution : Equipment may be delivered to you only in the United States. You
+understand that you are responsible for self-installing the Equipment once you receive it, unless you select a
+technician installation from Brightspeed for an additional charge. You are encouraged to complete
+installation of the Equipment promptly because you will be responsible for full payment for the charges on
+your bill even if you have not yet installed the Equipment and used the Service at the time the bill is rendered. 
+}
+
+{
+issue : Installation, Maintenance and Support.
+resolution : (a) You may choose on-site installation for a charge or select the self-installation method. Charges may apply for
+certain maintenance, trouble isolation, and support services and if a technician is dispatched. Charges may
+be per technician, may vary depending on when services are performed (e.g., time of day and weekday,
+holiday or weekend), and may include a minimum charge regardless of the actual number of hours worked.
+Brightspeed will notify you of any applicable charges in advance of you incurring such charges. If you report
+trouble, you must pay a dispatch charge if the trouble is not found in Brightspeed facilities (no charge if
+Brightspeed later finds the trouble was in Brightspeed facilities) or Brightspeed equipment or is found in
+customer equipment/systems or Equipment. A dispatch charge also applies if: (A) Customer requests a
+service date change but fails to notify Brightspeed before the service date and Brightspeed technician is
+dispatched on the service date (will have to pay dispatch charge and Brightspeed will change the service
+date) or (B) Brightspeed technician dispatched for maintenance of service and no trouble is found in
+Brightspeed facilities (applies each time this happens). Any requested repairs to your facilities or equipment
+are not included in the dispatch fee, and will be charged on a time and materials basis.
+}
+
+{
+issue : Account Usage and Identification.
+resolution : You will receive a user name and password and/or other identifying
+information (collectively and together with other information about your account the “Account
+Information”) upon completing the registration process. You are responsible for maintaining the
+confidentiality of the Account Information, and are fully responsible for all activities that occur under your
+account including payment for all such activities. You agree: (A) that only you and your authorized
+designees will use your Account Information and that you will not transfer or disclose such Account
+Information to any other person, (B) to immediately notify Brightspeed of any unauthorized use on your
+account or any other breach of security, and (C) to ensure that you exit from your account at the end of
+each session. "Authorized designees" means members of your family or business associates that you, at
+your own risk and responsibility, permit to access the Internet access service using your Account
+Information.
+}
+
+{
+issue : E-mail Storage Space and Other Limitations.
+resolution : Certain Services have limited storage availabilities and/or
+capabilities. Company reserves the right to delete, without prior notice, files from any directory or mailbox
+if the associated storage limitations are exceeded. Company provides unlimited storage of read email per
+mailbox, except for attachments to emails and other files uploaded by you which company reserves the
+right to remove after 120 days. Unread messages may be removed from your inbox 90 days after delivery.
+All email may be removed from your Trash or SPAM folders after 2 days.
+}
+
+{
+issue : a want to know About Change of Service
+resolution : A change or disconnect of Service could lead to the loss of stored e-mail. Such loss
+may ordinarily be prevented by saving such e-mail on your personal computer prior to the change of
+Service. Customer will not hold Brightspeed liable for the loss of e-mail during the change of Service
+process, whether caused by Customer or Brightspeed.
+}
+
+{
+issue : i want to know about Brightspeed's Privacy Notice
+resolution : At Brightspeed, we want you to know how we collect, use, and share personal information. This notice applies when you visit brightspeed.com and other websites that link to this privacy notice ("Sites"), when you subscribe to or access any of our voice, Internet, customer support and protection plans or other services ("Services") for both personal and business use. It applies only to Brightspeed Sites and Services. If you access services from another company through Brightspeed, the other company's privacy notice will apply to the information that they collect and use. 
+}
+
+{
+issue : Updating your web browser
+resolution : If you're having trouble getting Control Center to load quickly, your account information to show, and struggling to get the system to do what you expect it should do, your web browser could be the cause of all the frustration. 
+To access Control Center, Brightspeed supports the following browsers: 
+1.Chrome version 45 and higher (Mac and Windows) 
+2.Firefox version 43 and higher (Mac and Windows)
+3.Edge version 15 and higher (Windows only) 
+To begin fixing the problem, figure out which browser you're using, and then, decide if you need to update the version you're on, change to a different type of browser, or clear the cache of your browser. Also, if you're wondering which browser you're using (including the version), it's easy to automatically check it. 
+If you're having problems accessing Control Center, you might have more luck if you updated the browser software you're using or try a different 
+}
+
+{
+issue : Clearing your browser cache, cookies, and history
+resolution : If you're experiencing glitches when you work in Control Center, the solution might be as simple as clearing your browser cache, cookies, and history. 
+Your browser lets your computer talk with the internet to serve up web pages. To do its job, it must "remember" certain things. For example, instead of wasting time reloading the same images or even entire web pages, over and over again, your browser will save some of this information for faster downloading times. And, depending on your computer settings, it may also remember addresses of websites you've visited, documents you've downloaded, your search history, commonly used passwords, and data from advertisers. 
+Sometimes all that history can cause problems. If you're repeatedly experiencing trouble loading a web page, a first troubleshooting step is to clear your browser cache, cookies, and history. This forces your browser to look for fresh information and stop loading old data. 
+}
+
+{
+issue : Control Center - Monitoring tab 
+resolution : Control Center offers a range of reporting options for you to check the performance of your services. Options include network performance and usage to make it easier to manage your service. Control Center also offers billing reports to help you monitor your invoices. 
+Network Visibility 
+Use Network Visibility to monitor or review performance of your Brightspeed network services. To quickly find a location or service, start typing it in the search field. 
+1.Identify problem locations or services quickly, then view details of its service utilization or performance. 
+2.View service utilization or performance data at a glance using Map View or List View. 
+3.Set threshold alerts for utilization and performance metrics to be notified if your services exceed the threshold. 
+4.View open repair tickets and scheduled maintenance information by location and by service. 
+5.View trend analysis of utilization patterns to plan for circuit upgrades, configuration changes, and scaling. 
+6.Exploring the Network Visibility dashboard 
+7.Viewing backbone performance metrics 
+8.Viewing a summary network performance report 
+9.Viewing utilization metrics for a service in Network Visibility Viewing performance metrics for a service in Network Visibility 
+}
+
+{
+issue : Paying an invoice online 
+resolution : Make a one-time payment or set up automatic payments with AutoPay. You can pay by credit card or bank account. Not only is paying online convenient, but it also gets you an immediate record of your payment. 
+paying by bank account-checking or savings account 
+paying by credit or debit card-Visa, MasterCard, or Discover (Sorry, we don't accept American Express.) 
+enrolling in AutoPay-recurring, automatic payment 
+Note: You can make payments in Control Center in U.S. dollars (USD) only. For payments in other currencies, please pay by mail or contact us. 
+Once you make a payment, you'll see it listed in the list of scheduled payments. You can also cancel a scheduled payment.
+}
+
+{
+issue : Exploring the Network Visibility dashboard 
+resolution : Use Network Visibility to monitor or review performance of your Brightspeed services. To quickly find a location or service, start typing it in the search field. 
+1.Identify problem locations or services quickly, then view details of its service utilization or performance. 
+2.View service utilization or performance data at a glance using Map View or List View. 
+3.Set threshold alerts for utilization and performance metrics to be notified if your services exceed the threshold. 
+4.View open repair tickets and scheduled maintenance information by location and by service. 
+5.View trend analysis of utilization patterns to plan for circuit upgrades, configuration changes, and scaling. 
+Access the Network Visibility dashboard
+}
+
+{
+issue : Control Center - Support tab
+resolution : Using Control Center, you can submit repair tickets and request configuration changes and circuit tests for your services. You can then view the status on your requests and make changes as necessary. You can also view scheduled maintenance events affecting your services, manage repair contacts, and more. 
+Repair tickets 
+Scheduled maintenance 
+Repair tickets 
+Create, manage, and view status on repair tickets in Control Center. You can also communicate with your Brightspeed technician as we work to resolve your issue: 
+1.Creating a repair ticket 
+2.Viewing the status of a repair ticket 
+3.Searching for, sorting, and filtering repair tickets 
+4.Updating information in a repair ticket Escalating a repair ticket 
+5.Canceling a repair ticket 
+6.Creating a reason for outage (RFO) request 
+7.Viewing details for a potential repair ticket Converting a potential ticket into a repair ticket Dismissing a potential repair ticket 
+8.Viewing the status of a ticket without signing in 
+
+Scheduled maintenance 
+You can view scheduled network maintenance events associated with your Brightspeed services. Control Center shows maintenance events for the current month and 11 months into the future so you can plan ahead. You can also open a ticket to ask questions about the event or to or request that an event be rescheduled so it's less (or not at all) distruptive to your business. 
+1.Viewing scheduled maintenance events in a list or on a calendar.
+2.Creating an inquiry ticket on a scheduled maintenance event 
+}
+
+{
+issue : Troubleshooting login problems where Problems with login credentials
+resolution : If you've forgotten your login credentials, you can retrieve your username and password. (If needed, as part of the retrieval process, you can reset your password.) 
+If you're certain the username and password are correct, the problem might be how you're entering the information. 
+Browser or network 
+Are you copying and pasting your username or password? If so, that could be why you're experiencing troubles. When a username and password is copied, extra spaces may be included and 
+inserted as part of the login credentials. With the extra space, the system doesn't recognize the username or password, and you get an error message. If this is the problem you're 
+experiencing, manually typing in your username and password should solve it. 
+Are you relying on your browser to enter your password using stored information? Stored passwords usually don't work with our systems. We recommend manually typing in your Control Center password, rather than relying on your browser to retrieve it. 
+For some customers, the system automatically 
+adds @control.brightspeed.com to the end of their username. For example, if your username is sallysmith, the system would change it to be sallysmith@control.brightspeed.com. If you see this happen with your username, do not delete the @control.brightspeed.com. It's there for a reason and is part of the login process. 
+Note: If you're ever asked to provide your username, type the information before the @ sign-in this case, sallysmith. 
+}
+
+{
+issue : Troubleshooting login problems where Problems with a deactivated user profile
+resolution : If it's been a while since you last signed in, your Control Center user profile may be deactivated. For security purposes, Control Center deactivates user profiles after six months of inactivity and emails you 30 days before to remind you that your profile will be deactivated. (You can keep your profile active if you sign in every six months.) If your user profile is deactivated, your system administrator can reactivate your user profile for you so you can sign in again. 
+}
+
+{
+issue : Troubleshooting login problems where Problems with a locked user profile 
+resolution : After several unsuccessful login attempts, Control Center locks your user profile for security purposes. This is a preventative measure against unauthorized people accessing Control Center with your credentials. If your user profile is locked, you'll receive an email with instructions on how to proceed. 
+}
+
+{
+issue : Troubleshooting login problems where Problems with your browser or network 
+resolution : If your login credentials are correct, the problem could be with your browser. If Control Center is running slowly, that could be a browser problem, try the following: 
+clear your browser cache, history, and cookies 
+try using a different type of browser (e.g., Chrome, Firefox) update the browser version you're using 
+If none of these things work, close your browser and restart it. 
+Sometimes login problems have to do with your IP address. For instance, if you work for a government agency and have tried the things mentioned in this article without success, you should consult your IT department. The problem may be that your computer was temporarily disconnected from your network. Resetting, or renewing, your static IP address could solve the problem. 
+}
+
+{
+issue : Control Center - Billing tab - Invoices
+resolution : Invoices 
+Use Control Center to view your current and past invoices. You can also set the invoice-delivery method for your organization (by account) and sign up for paperless billing: 
+1.Viewing an invoice 
+2.Requesting a PDF copy of an invoice Viewing a prior invoice 
+3.Requesting a PDF of a prior invoice 
+4.Viewing the status of an invoice PDF Downloading invoice PDFs 
+5.Deleting an invoice PDF 
+6.Changing your invoice-delivery method 
+7.Signing up for paperless billing 
+}
+
+{
+issue : Control Center - Billing tab - Payments 
+resolution : Payments 
+Make one-time or recurring payments for your Brightspeed services using Control Center. View scheduled payments and a history of payments posted for your organization
+1.Paying an invoice online-one-time or recurring payments 
+2.Paying by bank account 
+3.Paying by credit or debit card 
+4.Enrolling in AutoPay. 
+5.Unenrolling from AutoPay. 
+6.Troubleshooting payment problems Viewing scheduled payments Canceling a scheduled payment Viewing your payment history. 
+}
+
+{
+issue : Control Center - Billing tab - Billing requests 
+resolution : Billing requests 
+Create and manage billing-related requests to Brightspeed, such as requests for credits, adjustments, or address changes: 
+Creating a billing request 
+Viewing the status of a billing request 
+Updating information in a billing request 
+Closing a billing request 
+Changing your billing address 
+}
+
+{
+issue : Control Center - Billing tab - Accounts and account groups
+resolution : Accounts and account groups
+Use account groups to simplify how you manage your accounts in Control Center. Account groups let you create custom views showing a set of accounts and to add accounts (as a group) to user profiles so they can manage services on those accounts: 
+Creating an account group Updating an account group 
+Renaming an account group 
+Deleting an account group 
+Changing the default account group view 
+Viewing a list of accounts on an enterprise ID
+}
+
+{
+issue : Control Center - Billing tab - Billing reports 
+resolution : Billing reports 
+From Control Center, you can access Bill Analyst to view summary or detail reports to track and analyze your telecom spending data. With your billing data, you can view standard reports or create custom reports to:  
+1.rank telecom expenses as a budget item 
+2.allocate costs across multiple departments or locations 
+3.track calling patterns 
+4.share costs with other departments 
+5.consolidate statements 
+6.align hierarchies, markups, and cost allocations 
+7.allocate automatically 
+8.check for errors 
+}

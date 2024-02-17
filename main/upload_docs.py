@@ -12,7 +12,7 @@ api_key = os.getenv('PINECONE_API_KEY')
 client = Pinecone(api_key=api_key)
 
 # Read text data from file
-with open('assets\general.txt', 'r') as fp:
+with open('data\data6.txt', 'r',encoding='utf-8') as fp:
     lines = fp.readlines()
 
 # Initialize Sentence Transformer model

@@ -46,12 +46,15 @@ def classifier_gopika(user_input):
     content = user_input
     # service_account_key_path = "./gopika.json"
 
-    predict_text_classification_single_label_sample(project, location, endpoint, content)
+    return predict_text_classification_single_label_sample(project, location, endpoint, content)
 
 def classifier_azaan(user_input):
+# try:
     project = "spherical-list-412116"
     location = "us-central1"
     endpoint = "4741826413714210816"
     content = user_input
 
-    predict_text_classification_single_label_sample(project, location, endpoint, content)
+    return predict_text_classification_single_label_sample(project, location, endpoint, content)
+# except:
+#     return 'General'
