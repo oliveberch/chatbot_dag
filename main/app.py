@@ -1,4 +1,5 @@
 import streamlit as st
+from presidio import anonymize
 from  bs_agents.general_agent import agent_execution as general
 from  bs_agents.sales_agent import agent_execution as sales
 from  bs_agents.service_agent import agent_execution as service
@@ -28,11 +29,13 @@ if 'chat' not in st.session_state:
     "role": "ai"
   }]
 
+# user_input = message
 user_input = st.chat_input('Message', key= "user_input")
 
 if user_input:
+  message = anonymize(user_input)
   st.session_state['chat'].append({
-    "content": user_input,
+    "content": message,
     "role": "user"
   })
 

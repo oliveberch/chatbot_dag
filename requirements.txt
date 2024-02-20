@@ -15,3 +15,6 @@ oauth2client
 langchain-pinecone
 apache-airflow
 apache-airflow-providers-google
+presidio-analyzer
+presidio-anonymizer
+mysqlclient
