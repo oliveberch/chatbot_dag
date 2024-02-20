@@ -10,7 +10,7 @@ def greet_user_tool(user_name):
     Returns:
     - str: Greeting message.
     """
-    greeting_message = f"Hello, {user_name}! Welcome to BrightSpeed. How can I assist you today?"
+    greeting_message = f"send greet message to {user_name}"
     return greeting_message
 
 def get_greet_user_tool():

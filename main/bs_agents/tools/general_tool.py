@@ -13,8 +13,8 @@ chain = prompt | get_chat_model('openai')
 def get_general_tool():
     tool = Tool(
         func= chain.stream,
-        name="General Sales Tool",
-        description="Tool to answer the general questions",
+        name="General Tool",
+        description="Tool to answer the general questions outside of Brightspeed",
         handle_parsing_errors=True
     )
     return tool
