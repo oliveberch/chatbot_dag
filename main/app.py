@@ -1,5 +1,7 @@
 import streamlit as st
-from  bs_agents import sales_agent, service_agent, general_agent
+from  bs_agents.general_agent import agent_execution as general
+from  bs_agents.sales_agent import agent_execution as sales
+from  bs_agents.service_agent import agent_execution as service
 from classifier import classifier_gopika, classifier_azaan
 import os
 from dotenv import load_dotenv
@@ -20,8 +22,8 @@ st.set_page_config(
 
 st.title('Chatbot')
 
-if 'chat-history' not in st.session_state:
-  st.session_state['chat-history'] = [{
+if 'chat' not in st.session_state:
+  st.session_state['chat'] = [{
     "content": "Hi, you've reached Brightspeed chat support. How can I help you today?",
     "role": "ai"
   }]
@@ -29,44 +31,43 @@ if 'chat-history' not in st.session_state:
 user_input = st.chat_input('Message', key= "user_input")
 
 if user_input:
-  st.session_state['chat-history'].append({
+  st.session_state['chat'].append({
     "content": user_input,
     "role": "user"
   })
 
-  # call classifier to get agent
+  # call classifier model to get agent for query
   # category = classifier_gopika(user_input)
   category = classifier_azaan(user_input)
   
-
   # make calls based on agent
   if category == 'service':
     # service
-    agent = service_agent.get_agent()
-    agent_response = agent.invoke({user_input})
-    st.session_state['chat-history'].append({
+    agent = service
+    agent_response = agent.invoke({'input':user_input})
+    st.session_state['chat'].append({
       "content": agent_response['output'],
       "role": "ai"
     })
   elif category  == 'sales':
     # sales
-    agent = sales_agent.get_agent()
-    agent_response = agent.invoke({user_input})
-    st.session_state['chat-history'].append({
+    agent = sales
+    agent_response = agent.invoke({'input':user_input})
+    st.session_state['chat'].append({
       "content": agent_response['output'],
       "role": "ai"
     })
   else:
     # general
-    agent = general_agent.get_agent()
-    agent_response = agent.invoke({user_input})
-    st.session_state['chat-history'].append({
+    agent = general
+    agent_response = agent.invoke({'input':user_input})
+    st.session_state['chat'].append({
       "content": agent_response['output'],
       "role": "ai"
     })
 
   
-if st.session_state['chat-history']:
-  for i in range(0, len(st.session_state['chat-history'])):
-    user_message = st.session_state['chat-history'][i]
+if st.session_state['chat']:
+  for i in range(0, len(st.session_state['chat'])):
+    user_message = st.session_state['chat'][i]
     st.chat_message(user_message["role"]).write(user_message["content"])
