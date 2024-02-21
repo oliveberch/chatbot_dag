@@ -10,7 +10,7 @@ entity_names = [
     "EMAIL_ADDRESS",
     "IBAN_CODE",
     "IP_ADDRESS",
-    "PERSON",
+    # "PERSON",
     "PHONE_NUMBER",
     "MEDICAL_LICENSE",
     "URL",

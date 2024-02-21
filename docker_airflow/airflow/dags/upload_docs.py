@@ -1,83 +1,99 @@
 from datetime import datetime, timedelta
 from airflow import DAG
-from airflow.providers.google.transfers.gcs_to_local import GCSToLocalFilesystemOperator
 from airflow.operators.python_operator import PythonOperator
-from sentence_transformers import SentenceTransformer
-from pinecone import Pinecone
-
-import os
+from airflow.contrib.sensors.gcs_sensor import GoogleCloudStorageObjectUpdatedSensor
 from dotenv import load_dotenv
+from langchain.document_loaders import TextLoader
+from langchain.text_splitter import CharacterTextSplitter
+from langchain.embeddings.huggingface import HuggingFaceEmbeddings
+from langchain.vectorstores import Pinecone
+import logging
+
 load_dotenv()
 
-# Define your DAG settings
+# def send_notification_email(**kwargs): 
+#     # Your email notification logic here
+#     subject = "Document Upload Notification"
+#     body = "The document has been successfully uploaded to Pinecone."
+
+#     # Example EmailOperator usage
+#     email_task = EmailOperator(
+#         task_id='send_email_notification',
+#         to='your@email.com',
+#         subject=subject,
+#         html_content=body,
+#     )
+#     email_task.execute(context=kwargs)
+
+def process_and_upload_to_pinecone(**kwargs):
+    print("Remotely received value of {} for key=message".format(kwargs['dag_run'].conf['file_name']))
+
+    # Load text from GCS
+    file_name = kwargs['dag_run'].conf['file_name']
+    # loader = TextLoader("gs://your_gcs_bucket/your_file_in_gcs.txt")
+    loader = TextLoader(file_name)
+    pages = loader.load_and_split()
+
+    # Split text into chunks
+    text_splitter = CharacterTextSplitter(chunk_size=500, chunk_overlap=10)
+    documents = text_splitter.split_documents(pages)
+
+    # Initialize HuggingFace embeddings model
+    embeddings_model = HuggingFaceEmbeddings(
+        model_name="thenlper/gte-large",
+        encode_kwargs={"normalize_embeddings": True},
+    )
+
+    # Upload embeddings to Pinecone
+    index = "starter"
+    namespace = 'documents' # new namespace in pinecone
+    Pinecone.from_documents(documents, embeddings_model, index_name=index, namespace=namespace)
+
+    # Log a message indicating successful upload
+    logging.info("Document successfully uploaded to Pinecone.")
+
+    # Send an email notification
+
+
+
 default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
-    'start_date': datetime(2024, 1, 1),
-    'email_on_failure': False,
-    'email_on_retry': False,
+    'start_date': datetime.utcnow(),
     'retries': 1,
     'retry_delay': timedelta(minutes=5),
 }
 
 dag = DAG(
-    'gcs_to_pinecone',
+    dag_id='dag_conf',
     default_args=default_args,
-    description='A DAG to transfer data from GCS to Pinecone',
-    schedule_interval='@daily',  # Set your preferred schedule
+    description='uploading data into pinecone',
+    schedule_interval=None,  # Adjust as per your requirement
 )
 
-# Define the function to upload data to Pinecone
-def upload_to_pinecone(**kwargs):
-    pinecone_index = os.getenv('PINECONE_INDEX')  # Replace with your Pinecone index name
-    gcs_file_path = kwargs['ti'].xcom_pull(task_ids='download_from_gcs')['output_path']
+with dag:
+    # Sensor task to wait for the file to be uploaded to GCS
+    gcs_sensor = GoogleCloudStorageObjectUpdatedSensor(
+        task_id='gcs_sensor',
+        bucket='bucket_name',
+        object='file_name.txt',
+        google_cloud_storage_conn_id='google_cloud_default',
+        timeout=600,  
+    )
 
-    # Initialize Pinecone client
-    pinecone = Pinecone(api_key=os.getenv('PINECONE_API_KEY'))  # Replace with your Pinecone API key
-
-    # Initialize Sentence Transformer model
-    embeddings_model = SentenceTransformer('thenlper/gte-large')
-
-    # Read text data from file
-    with open(gcs_file_path, 'r') as fp:
-        lines = fp.readlines()
-
-    # Generate embeddings for each line of text
-    embeddings = [embeddings_model.encode(line) for line in lines]
-
-    # Prepare vectors for Pinecone index
-    vectors = [{'id': str(i), 'values': embeddings[i], 'metadata': {'text': lines[i]}} for i in range(len(lines))]
-
-    # Upload embeddings to Pinecone
-    try:
-        pinecone.upsert(
-            vectors=vectors,
-            namespace='service-namespace'
-        )
-        print('Success')
-    except Exception as e:
-        print(e)
+    # PythonOperator to process and upload to Pinecone
+    process_and_upload_task = PythonOperator(
+        task_id='process_and_upload_to_pinecone',
+        python_callable=process_and_upload_to_pinecone,
+        provide_context=True,
+    )
 
 
-
-# Define the tasks
-
-# Task to download data from GCS
-download_from_gcs_task = GCSToLocalFilesystemOperator(
-    task_id='download_from_gcs',
-    bucket_name='your_gcs_bucket',  # Replace with your GCS bucket name
-    object_name='your_gcs_object',  # Replace with your GCS object name
-    destination_path='/tmp/data',
+bash_task = BashOperator(
+    task_id="bash_task",
+    bash_command='echo "Here is the message: '
+                 '{{ dag_run.conf["message"] if dag_run else "" }}" ',
     dag=dag,
 )
-
-# Task to upload data to Pinecone
-upload_to_pinecone_task = PythonOperator(
-    task_id='upload_to_pinecone',
-    python_callable=upload_to_pinecone,
-    provide_context=True,
-    dag=dag,
-)
-
-# Set task dependencies
-download_from_gcs_task >> upload_to_pinecone_task
+    # Set up task dependencies
+    # gcs_sensor >> process_and_upload_task
