@@ -1,7 +1,7 @@
 version: "3"
 services:
   sleek-airflow:
-    image: genai_chatbot:latest
+    image: chatbotdag:latest
     volumes:
       - ./airflow:/opt/airflow
     ports:
