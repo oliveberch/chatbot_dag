@@ -1,22 +1,27 @@
-langchain
-pinecone-client
-python-dotenv
-sentence-transformers
-langchain_experimental
-openai
-pypdf
-duckduckgo-search
-langchain_openai
-PyPDF2
-google-cloud-aiplatform
-google-cloud-storage
-oauth2client
-langchain-pinecone
+# langchain
+# pinecone-client
+# python-dotenv
+# sentence-transformers
+# langchain_experimental
+# openai
+# pypdf
+# duckduckgo-search
+# langchain_openai
+# PyPDF2
+# google-cloud-aiplatform
+# google-cloud-storage
+# oauth2client
+# langchain-pinecone
+# apache-airflow
+# apache-airflow-providers-google
+# presidio-analyzer
+# presidio-anonymizer
+# mysqlclient
+# sqlalchemy
+# psycopg2-binary
+# pkgconfig
+
 apache-airflow
-apache-airflow-providers-google
-presidio-analyzer
-presidio-anonymizer
-mysqlclient
-sqlalchemy
-psycopg2-binary
-pkgconfig
+google-auth
+langchain
+python-dotenv

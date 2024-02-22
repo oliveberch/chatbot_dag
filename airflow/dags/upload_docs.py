@@ -1,7 +1,8 @@
 from datetime import datetime, timedelta
 from airflow import DAG
-from airflow.operators.python_operator import PythonOperator
-from airflow.contrib.sensors.gcs_sensor import GoogleCloudStorageObjectUpdatedSensor
+from airflow.operators.python import PythonOperator
+from airflow.operators.bash import BashOperator
+from airflow.contrib.sensors import GoogleCloudStorageObjectUpdatedSensor
 from dotenv import load_dotenv
 from langchain.document_loaders import TextLoader
 from langchain.text_splitter import CharacterTextSplitter
@@ -14,7 +15,7 @@ load_dotenv()
 def process_and_upload_to_pinecone(**kwargs):
     print("Remotely received value of {} for key=message".format(kwargs['dag_run'].conf['file_name']))
 
-    # Load text from GCS
+    # Load text from GCS file
     file_name = kwargs['dag_run'].conf['file_name']
     loader = TextLoader(file_name)
     pages = loader.load_and_split()
@@ -29,8 +30,8 @@ def process_and_upload_to_pinecone(**kwargs):
         encode_kwargs={"normalize_embeddings": True},
     )
 
-    # Upload embeddings to Pinecone
-    index = "starter"
+    # Upload embeddings to Pinecone index
+    index = "index1"
     namespace = 'documents'
     Pinecone.from_documents(documents, embeddings_model, index_name=index, namespace=namespace)
 
@@ -55,8 +56,8 @@ dag = DAG(
 with dag:
     gcs_sensor = GoogleCloudStorageObjectUpdatedSensor(
         task_id='gcs_sensor',
-        bucket='bucket_name',
-        object='file_name.txt',
+        bucket='bucket_name', # add bucket name
+        object='file_name.txt', # add file name
         google_cloud_storage_conn_id='google_cloud_default',
         timeout=600,
     )
